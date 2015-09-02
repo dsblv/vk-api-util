@@ -58,6 +58,11 @@ Pass a string of [scopes](http://vk.com/dev/permissions) divided by comma (`,`) 
 
 Returns true if given area is visible within given scope.
 
+```js
+vkApiUtil.checkScope(['friends', 'video'], 4456466);
+//=> true
+```
+
 #### area
 
 *Required*  

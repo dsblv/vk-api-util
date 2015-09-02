@@ -51,6 +51,7 @@ describe('#checkScope()', function () {
 		assert(vkApiUtil.checkScope('friends', 2));
 		assert(vkApiUtil.checkScope('friends', 10));
 		assert(vkApiUtil.checkScope(['video', 'offers'], 50));
+		assert(vkApiUtil.checkScope(['friends', 'video'], 4456466));
 	});
 	it('should return FALSE if area is out of scope', function () {
 		assert(!vkApiUtil.checkScope('friends', 4));
