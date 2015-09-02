@@ -29,6 +29,7 @@
   "dependencies": {
     "vk-api-all-methods": "^1.0.0",
     "vk-api-open-methods": "^1.0.0",
+    "vk-api-scoped-methods": "^1.0.0",
     "vk-api-scopes": "^1.0.0"
   },
   "devDependencies": {

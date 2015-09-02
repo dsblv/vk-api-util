@@ -59,3 +59,20 @@ describe('#checkScope()', function () {
 		assert(!vkApiUtil.checkScope(8, 2));
 	});
 });
+
+describe('#isMethodInScope', function () {
+	it('should return TRUE if method exists and in scope', function () {
+		assert(vkApiUtil.isMethodInScope('wall.post', ['wall']));
+		assert(vkApiUtil.isMethodInScope('newsfeed.getRecommended', 8198));
+	});
+	it('should return TRUE if method exists and doesn\'t require scope', function () {
+		assert(vkApiUtil.isMethodInScope('users.get'));
+		assert(vkApiUtil.isMethodInScope('users.get', ['wall']));
+	});
+	it('should return FALSE if method doesn\'t exist', function () {
+		assert(!vkApiUtil.isMethodInScope('wall.destroy', ['wall']));
+	});
+	it('should return FALSE if method exists and out of scope', function () {
+		assert(!vkApiUtil.isMethodInScope('wall.post', 2));
+	});
+});

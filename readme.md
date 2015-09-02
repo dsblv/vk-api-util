@@ -70,10 +70,27 @@ Type: `string`, `array` or `number`
 
 `area` and `scope` arguments are same as `scope` in aforementioned `vkUtil.bitMask()` method.
 
+
+### vkUtil.isMethodInScope(method, [scope]) → `boolean`
+
+Returns true if given method is reachable within given scope.
+
+#### method
+
+*Required*  
+Type: `string`
+
+#### scope
+
+Type: `string`, `array` or `number`
+Default: `0`
+
+
 ## Related
 
 - [vk-api-all-methods](https://github.com/dsblv/vk-api-all-methods) — List of all VK API methods
 - [vk-api-open-methods](https://github.com/dsblv/vk-api-open-methods) — List of VK API methods that don't require authentication
+- [vk-api-scoped-methods](https://github.com/dsblv/vk-api-scoped-methods) — Hash of VK API methods that require correct scope and scopes they require
 - [vk-api-scopes](https://github.com/dsblv/vk-api-scopes) — Hash of VK API access permission codes
 
 ## License

@@ -1,12 +1,19 @@
 var methods = require('vk-api-all-methods');
 var openMethods = require('vk-api-open-methods');
+var scopedMethods = require('vk-api-scoped-methods');
 var scopes = require('vk-api-scopes');
 
 exports.isMethod = function (method) {
+	if (typeof method !== 'string') {
+		return false;
+	}
 	return (method.split('.')[0] === 'execute') || (methods.indexOf(method) !== -1);
 };
 
 exports.isOpenMethod = function (method) {
+	if (typeof method !== 'string') {
+		return false;
+	}
 	return (openMethods.indexOf(method) !== -1);
 };
 
@@ -39,4 +46,18 @@ exports.checkScope = function (areas, scope) {
 	scope = exports.bitMask(scope);
 
 	return areas === (scope & areas);
+};
+
+exports.isMethodInScope = function (method, scope) {
+	scope = scope || 0;
+
+	if (!exports.isMethod(method)) {
+		return false;
+	}
+
+	if (!scopedMethods.hasOwnProperty(method)) {
+		return true;
+	}
+
+	return exports.checkScope(scopedMethods[method], scope);
 };
