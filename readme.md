@@ -48,8 +48,8 @@ Returns [bit mask](http://vk.com/dev/permissions) for given scope.
 
 #### scope
 
-*Required* 
-Type: `string` or `array` or `number`
+*Required*  
+Type: `string`, `array` or `number`
 
 Pass a string of [scopes](http://vk.com/dev/permissions) divided by comma (`,`) or array of scopes. If number is passed it assumed to be a bit mask itself and returned without changes.
 
@@ -60,16 +60,21 @@ Returns true if given area is visible within given scope.
 
 #### area
 
-*Required* 
-Type: `string` or `array` or `number`
+*Required*  
+Type: `string`, `array` or `number`
 
 #### scope
 
-*Required* 
-Type: `string` or `array` or `number`
+*Required*  
+Type: `string`, `array` or `number`
 
 `area` and `scope` arguments are same as `scope` in aforementioned `vkUtil.bitMask()` method.
 
+## Related
+
+- [vk-api-all-methods](https://github.com/dsblv/vk-api-all-methods) — List of all VK API methods
+- [vk-api-open-methods](https://github.com/dsblv/vk-api-open-methods) — List of VK API methods that don't require authentication
+- [vk-api-scopes](https://github.com/dsblv/vk-api-scopes) — Hash of VK API access permission codes
 
 ## License
 
