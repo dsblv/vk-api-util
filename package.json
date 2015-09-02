@@ -1,0 +1,37 @@
+{
+  "name": "vk-api-util",
+  "version": "0.0.0",
+  "description": "Utility methods for working with VK API",
+  "license": "MIT",
+  "repository": "dsblv/vk-api-util",
+  "author": {
+    "name": "Dmitriy Sobolev",
+    "email": "disobolev@icloud.com",
+    "url": "vk.com/sobo13v"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "vk",
+    "вконтакте",
+    "api",
+    "methods",
+    "utility",
+    "useful"
+  ],
+  "dependencies": {
+    "vk-api-all-methods": "^1.0.0",
+    "vk-api-open-methods": "^1.0.0",
+    "vk-api-scopes": "^1.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5"
+  }
+}
