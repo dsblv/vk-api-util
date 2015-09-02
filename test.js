@@ -60,7 +60,7 @@ describe('#checkScope()', function () {
 	});
 });
 
-describe('#isMethodInScope', function () {
+describe('#isMethodInScope()', function () {
 	it('should return TRUE if method exists and in scope', function () {
 		assert(vkApiUtil.isMethodInScope('wall.post', ['wall']));
 		assert(vkApiUtil.isMethodInScope('newsfeed.getRecommended', 8198));

@@ -82,7 +82,7 @@ Type: `string`
 
 #### scope
 
-Type: `string`, `array` or `number`
+Type: `string`, `array` or `number`  
 Default: `0`
 
 
